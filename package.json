@@ -1,0 +1,73 @@
+{
+  "name": "frontend-starter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Solution to the '{{CHALLENGE_NAME}}' challenge on Frontend Mentor",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "editorconfig": "npx editorconfig-cli",
+    "lint:scss": "stylelint \"src/scss/**/*.scss\"",
+    "lint:scss:fix": "stylelint \"src/scss/**/*.scss\" --fix --cache",
+    "lint:html": "html-validate \"*.html\"",
+    "lint:html:fix": "html-validate --fix \"*.html\"",
+    "format": "prettier . --write",
+    "format:check": "prettier . --check",
+    "prepare": "husky",
+    "images": "node scripts/optimize-images.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vlrnsnk/{{PROJECT_NAME}}.git"
+  },
+  "keywords": [
+    "frontendmentor",
+    "frontend",
+    "vite",
+    "scss",
+    "template"
+  ],
+  "author": "Valeriy Anysenko",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vlrnsnk/{{PROJECT_NAME}}/issues"
+  },
+  "homepage": "https://vlrnsnk.github.io/{{PROJECT_NAME}}",
+  "browserslist": [
+    "last 2 versions",
+    "not dead",
+    "> 0.2%",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "editorconfig-cli": [
+    "*.json",
+    "*.js",
+    "src/*.html",
+    "src/scss/**/*.scss"
+  ],
+  "lint-staged": {
+    "*.{js,html,scss,css,json,md}": "prettier --write",
+    "src/scss/**/*.scss": "stylelint --fix --cache",
+    "*.{js,json}": "npx editorconfig-cli",
+    "*.html": "html-validate"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.5.3",
+    "editorconfig-cli": "^1.0.0",
+    "html-validate": "^11.5.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^17.0.8",
+    "postcss": "^8.5.19",
+    "prettier": "3.9.5",
+    "sass": "^1.101.0",
+    "sharp-cli": "^5.2.0",
+    "stylelint": "^17.14.0",
+    "stylelint-config-standard-scss": "^17.0.0",
+    "stylelint-order": "^8.1.1",
+    "stylelint-scss": "^7.2.0",
+    "vite": "^8.1.4"
+  }
+}

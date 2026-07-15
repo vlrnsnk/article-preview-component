@@ -1,0 +1,11 @@
+/* Font stacks with fallbacks */
+
+html {
+  font-size: 100%;
+}
+
+body {
+  font-family: var(--font-family-sans-serif);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

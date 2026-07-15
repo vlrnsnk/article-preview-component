@@ -1,0 +1,13 @@
+/* Fonts */
+
+$fonts: ();
+
+@each $weight, $file in $fonts {
+  @font-face {
+    font-family: sans-serif;
+    font-weight: $weight;
+    font-style: normal;
+    src: url('../../assets/fonts/#{$file}.woff2') format('woff2');
+    font-display: swap;
+  }
+}

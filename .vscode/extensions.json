@@ -1,0 +1,8 @@
+{
+  "recommendations": [
+    "stylelint.vscode-stylelint",
+    "formulahendry.auto-rename-tag",
+    "editorconfig.editorconfig",
+    "esbenp.prettier-vscode"
+  ]
+}
