@@ -11,6 +11,22 @@
   letter-spacing: $letter-spacing;
 }
 
+@mixin text-preset-1() {
+  @include text($font-family-manrope, 1.25rem, 700, 1.3, 0.25px);
+}
+
+@mixin text-preset-2() {
+  @include text($font-family-manrope, 0.8125rem, 500, 1.4, 0.12%);
+}
+
+@mixin text-preset-3() {
+  @include text($font-family-manrope, 0.8125rem, 700, 1.4, 0.12%);
+}
+
+@mixin text-preset-4() {
+  @include text($font-family-manrope, 0.8125rem, 500, 1.4, 25%);
+}
+
 /* Transitions */
 @mixin transition($properties...) {
   $transitions: ();
