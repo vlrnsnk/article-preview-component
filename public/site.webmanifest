@@ -1,6 +1,6 @@
 {
-  "name": "Template",
-  "short_name": "Template",
+  "name": "Article Preview Component",
+  "short_name": "Article Preview Component",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",

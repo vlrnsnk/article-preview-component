@@ -1,9 +1,9 @@
 {
-  "name": "frontend-starter",
+  "name": "article-preview-component",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Solution to the '{{CHALLENGE_NAME}}' challenge on Frontend Mentor",
+  "description": "Solution to the 'Article preview component' challenge on Frontend Mentor",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vlrnsnk/{{PROJECT_NAME}}.git"
+    "url": "git+https://github.com/vlrnsnk/article-preview-component.git"
   },
   "keywords": [
     "frontendmentor",
@@ -32,9 +32,9 @@
   "author": "Valeriy Anysenko",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/vlrnsnk/{{PROJECT_NAME}}/issues"
+    "url": "https://github.com/vlrnsnk/article-preview-component/issues"
   },
-  "homepage": "https://vlrnsnk.github.io/{{PROJECT_NAME}}",
+  "homepage": "https://vlrnsnk.github.io/article-preview-component",
   "browserslist": [
     "last 2 versions",
     "not dead",
