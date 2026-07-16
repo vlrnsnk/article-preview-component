@@ -4,6 +4,7 @@
     "doctype-style": ["error", { "style": "lowercase" }],
     "void-style": "off",
     "no-trailing-whitespace": "error",
-    "attribute-boolean-style": "off"
+    "attribute-boolean-style": "off",
+    "attribute-allowed-values": "off"
   }
 }
