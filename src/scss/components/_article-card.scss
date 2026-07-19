@@ -39,13 +39,14 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    transition: opacity 200ms ease;
   }
 
-  // Mobile: when the share toast is open, the footer's button is covered by the
-  // toast's own button — hide it from view and from the tab order.
+  // Mobile: when the share toast is open, the footer fades out as the toast
+  // fades/slides in — a cross-fade in the same bottom region. The toast (absolute,
+  // higher z-index) overlays it, so pointer events are disabled while faded.
   &:has(.share-toast:not([hidden])) &__footer {
-    .share-button {
-      visibility: hidden;
-    }
+    opacity: 0;
+    pointer-events: none;
   }
 }
