@@ -6,8 +6,19 @@
   padding: 1.375rem 1.875rem;
   align-items: center;
   background-color: var(--color-grey-900);
+  opacity: 1;
+  transition:
+    opacity 200ms ease,
+    transform 200ms ease,
+    display 200ms allow-discrete;
+  transform: translateY(0);
   inset-block-end: 0;
   inset-inline: 0;
+
+  @starting-style {
+    opacity: 0;
+    transform: translateY(100%);
+  }
 
   &__item {
     cursor: pointer;
@@ -29,5 +40,7 @@
 
   &[hidden] {
     display: none;
+    opacity: 0;
+    transform: translateY(100%);
   }
 }
