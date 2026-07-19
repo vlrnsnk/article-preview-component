@@ -7,10 +7,9 @@
   align-items: center;
   background-color: var(--color-grey-900);
   opacity: 1;
-  transition:
-    opacity 200ms ease,
-    transform 200ms ease,
-    display 200ms allow-discrete;
+
+  @include transition(opacity, transform, display);
+
   transform: translateY(0);
   inset-block-end: 0;
   inset-inline: 0;

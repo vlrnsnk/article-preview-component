@@ -32,7 +32,11 @@
   $transitions: ();
 
   @each $prop in $properties {
-    $transitions: list.append($transitions, $prop 0.2s ease-in-out, comma);
+    @if $prop == display {
+      $transitions: list.append($transitions, $prop $transition-duration allow-discrete, comma);
+    } @else {
+      $transitions: list.append($transitions, $prop $transition-duration $transition-easing, comma);
+    }
   }
 
   transition: $transitions;

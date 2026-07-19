@@ -39,7 +39,8 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    transition: opacity 200ms ease;
+
+    @include transition(opacity);
   }
 
   // Mobile: when the share toast is open, the footer fades out as the toast
