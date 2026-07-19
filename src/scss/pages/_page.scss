@@ -1,0 +1,7 @@
+.page {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  background-color: var(--color-grey-200);
+  padding-inline: var(--spacing-300);
+}

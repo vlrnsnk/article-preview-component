@@ -1,0 +1,33 @@
+@use '../abstracts' as *;
+
+.profile {
+  display: flex;
+  align-items: center;
+  margin-inline-end: auto;
+
+  &__avatar {
+    margin-inline-end: var(--spacing-200);
+  }
+
+  &__image {
+    display: block;
+    width: 2.5rem;
+    height: 2.5rem;
+    border-radius: 50%;
+  }
+
+  &__info {
+    @include text-preset-2;
+
+    font-weight: 700;
+    color: var(--color-grey-900);
+  }
+
+  &__author {
+    letter-spacing: 1.5%;
+  }
+
+  &__date {
+    color: var(--color-grey-500);
+  }
+}

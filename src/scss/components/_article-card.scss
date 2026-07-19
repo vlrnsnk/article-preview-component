@@ -1,0 +1,51 @@
+@use '../abstracts' as *;
+
+.article-card {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 0.625rem;
+  overflow: hidden;
+
+  &__image {
+    max-height: 12.5rem;
+    object-fit: cover;
+    object-position: 0% 26%;
+  }
+
+  &__content {
+    padding: var(--spacing-400) 1.875rem 1.125rem;
+  }
+
+  &__title {
+    @include text-preset-1;
+
+    letter-spacing: 1.5%;
+    color: var(--color-grey-900);
+    margin-block-end: var(--spacing-300);
+  }
+
+  &__description {
+    @include text-preset-2;
+
+    letter-spacing: 1.5%;
+    color: var(--color-grey-500);
+    margin-block-end: var(--spacing-600);
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  // Mobile: when the share toast is open, the footer's button is covered by the
+  // toast's own button — hide it from view and from the tab order.
+  &:has(.share-toast:not([hidden])) &__footer {
+    .share-button {
+      visibility: hidden;
+    }
+  }
+}

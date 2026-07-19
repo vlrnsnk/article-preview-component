@@ -1,0 +1,47 @@
+@use '../abstracts' as *;
+
+.share-button {
+  --button-background-color: var(--color-grey-200);
+  --button-color: var(--color-grey-500);
+
+  display: grid;
+  width: var(--spacing-400);
+  height: var(--spacing-400);
+  place-items: center;
+  background-color: var(--button-background-color);
+  border: none;
+  border-radius: 50%;
+  color: var(--button-color);
+  cursor: pointer;
+
+  @include transition(background-color, color, transform);
+
+  &:hover {
+    --button-background-color: var(--color-grey-900);
+    --button-color: var(--color-white);
+  }
+
+  &:focus-visible {
+    outline: 0.1875rem solid var(--color-grey-900);
+    outline-offset: 0.1875rem;
+  }
+
+  &:active {
+    transform: translateY(1px);
+  }
+
+  &--inversed {
+    --button-background-color: var(--color-grey-500);
+    --button-color: var(--color-white);
+
+    &:hover {
+      --button-background-color: var(--color-white);
+      --button-color: var(--color-grey-500);
+    }
+
+    &:focus-visible {
+      outline: 0.1875rem solid var(--color-grey-200);
+      outline-offset: 0.1875rem;
+    }
+  }
+}

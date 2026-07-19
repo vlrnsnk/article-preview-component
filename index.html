@@ -36,55 +36,59 @@
             fetchpriority="high"
           />
         </picture>
-        <h1 class="article-card__title">
-          Shift the overall look and feel by adding these wonderful touches to furniture in your
-          home
-        </h1>
-        <p class="article-card__description">
-          Ever been in a room and felt like something was missing? Perhaps it felt slightly bare and
-          uninviting. I’ve got some simple tips to help you make any room feel complete.
-        </p>
-        <footer class="article-card__footer">
-          <picture>
-            <source srcset="/src/assets/images/avatar-michelle.avif" type="image/avif" />
-            <source srcset="/src/assets/images/avatar-michelle.webp" type="image/webp" />
-            <img
-              class="article-card__avatar"
-              src="/src/assets/images/avatar-michelle.jpg"
-              alt="Michelle Appleton"
-              width="175"
-              height="175"
-            />
-          </picture>
-          <div class="article-card__info">
-            <p class="article-card__author">Michelle Appleton</p>
-            <time class="article-card__date" datetime="2020-06-28">28 Jun 2020</time>
-          </div>
-          <button
-            class="article-card__share-button share-button"
-            type="button"
-            aria-expanded="false"
-            aria-controls="share-menu"
-            aria-label="Share this article"
-          >
-            <svg
-              class="share-button__icon"
-              xmlns="http://www.w3.org/2000/svg"
-              width="15"
-              height="13"
-              aria-hidden="true"
-              focusable="false"
+        <div class="article-card__content">
+          <h1 class="article-card__title">
+            Shift the overall look and feel by adding these wonderful touches to furniture in your
+            home
+          </h1>
+          <p class="article-card__description">
+            Ever been in a room and felt like something was missing? Perhaps it felt slightly bare
+            and uninviting. I’ve got some simple tips to help you make any room feel complete.
+          </p>
+          <footer class="article-card__footer">
+            <div class="profile">
+              <picture class="profile__avatar">
+                <source srcset="/src/assets/images/avatar-michelle.avif" type="image/avif" />
+                <source srcset="/src/assets/images/avatar-michelle.webp" type="image/webp" />
+                <img
+                  class="profile__image"
+                  src="/src/assets/images/avatar-michelle.jpg"
+                  alt="Michelle Appleton"
+                  width="175"
+                  height="175"
+                />
+              </picture>
+              <div class="profile__info">
+                <p class="profile__author">Michelle Appleton</p>
+                <time class="profile__date" datetime="2020-06-28">28 Jun 2020</time>
+              </div>
+            </div>
+            <button
+              class="article-card__share-button share-button"
+              type="button"
+              aria-expanded="false"
+              aria-controls="share-toast"
+              aria-label="Share this article"
             >
-              <path
-                fill="currentColor"
-                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
-              />
-            </svg>
-          </button>
-        </footer>
-        <div class="article-card__share-menu share-popup" id="share-menu" hidden>
-          <span class="share-popup__label" id="share-label">Share</span>
-          <ul class="share-popup__social social" aria-labelledby="share-label">
+              <svg
+                class="share-button__icon"
+                xmlns="http://www.w3.org/2000/svg"
+                width="15"
+                height="13"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <path
+                  fill="currentColor"
+                  d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+                />
+              </svg>
+            </button>
+          </footer>
+        </div>
+        <div class="article-card__share-toast share-toast" id="share-toast" hidden>
+          <span class="share-toast__label" id="share-label">Share</span>
+          <ul class="share-toast__social social" aria-labelledby="share-label">
             <li class="social__item">
               <a
                 class="social__link"
@@ -158,6 +162,27 @@
               </a>
             </li>
           </ul>
+          <button
+            class="share-toast__share-button share-button share-button--inversed"
+            type="button"
+            aria-expanded="false"
+            aria-controls="share-toast"
+            aria-label="Share this article"
+          >
+            <svg
+              class="share-button__icon"
+              xmlns="http://www.w3.org/2000/svg"
+              width="15"
+              height="13"
+              aria-hidden="true"
+              focusable="false"
+            >
+              <path
+                fill="currentColor"
+                d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z"
+              />
+            </svg>
+          </button>
         </div>
       </article>
     </main>
