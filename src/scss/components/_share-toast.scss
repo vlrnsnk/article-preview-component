@@ -64,4 +64,9 @@
       display: none;
     }
   }
+
+  @media screen and (width >= 64rem) {
+    inset-block-end: 33%;
+    inset-inline-end: -4.25rem;
+  }
 }
