@@ -90,6 +90,8 @@ Users should be able to:
 - **Modern focus vs hover separation.** `:focus-visible` should carry only an outline (a11y signal); `:hover` carries color/background; `:active` carries the press transform. Don't duplicate states.
 - **DRY motion via tokens + mixin.** Centralizing duration/easing in SCSS variables and a `transition()` mixin (with a `display` → `allow-discrete` branch) keeps every animation consistent from one dial.
 - **BEM: one file per block, even single-use.** Extracting `.social` into its own partial matched the project's convention and stayed ready for reuse.
+- **ARIA must hit the DOM, not just the property.** Assigning `el.ariaExpanded = 'true'` _reflects_ to the attribute in modern browsers but isn't guaranteed for assistive tech; `el.setAttribute('aria-expanded', value)` is the spec-reliable path. A FEM review caught this.
+- **Focus management for popovers.** When a toast/dialog opens, move focus to its first interactive element and restore it to the trigger on close — keyboard and screen-reader users otherwise lose context. Pair the panel with `role="dialog"` + `aria-label`.
 
 ## Setup
 
@@ -197,7 +199,7 @@ This project was built in close collaboration with **Claude** (Anthropic's Claud
 
 - **How it was used:** diagnosing Stylelint/SCSS compile errors, explaining CSS behavior (flex vs grid centering, `inset`, `overflow: hidden` clipping), proposing BEM restructuring, and guiding the JS share-toggle implementation. The human made all final design/code decisions and edits.
 - **What worked well:** rapid root-cause analysis of subtle bugs (e.g. `toast` vs `shareToast` variable mismatch, `inset-inline: 0` persistence, `display` not transitioning) and clear explanations of modern CSS features.
-- **What to improve:** early suggestions sometimes assumed conventions that didn't match the project (e.g. waiting for "second usage" before extracting a BEM block); correcting those mid-session produced better-aligned guidance. Treat AI output as a knowledgeable reviewer, not an authority — verify against the actual codebase.
+- **What to improve:** early suggestions sometimes assumed conventions that didn't match the project (e.g. waiting for "second usage" before extracting a BEM block); correcting those mid-session produced better-aligned guidance. Treat AI output as a knowledgeable reviewer, not an authority — verify against the actual codebase. A concrete example: the AI suggested `el.ariaExpanded = ...` for the share toggle, which a FEM code review correctly flagged as unreliable versus `setAttribute('aria-expanded', ...)`; the human caught and fixed it from the review feedback.
 
 ## Author
 
