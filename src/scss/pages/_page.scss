@@ -4,4 +4,8 @@
   place-content: center;
   background-color: var(--color-grey-200);
   padding-inline: var(--spacing-300);
+
+  @media screen and (width >= 44rem) {
+    padding-inline: 5rem;
+  }
 }

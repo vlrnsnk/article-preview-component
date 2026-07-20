@@ -7,10 +7,11 @@
   align-items: center;
   background-color: var(--color-white);
   border-radius: 0.625rem;
-  overflow: hidden;
 
   &__image {
+    overflow: hidden;
     max-height: 12.5rem;
+    border-radius: 0.625rem 0.625rem 0 0;
     object-fit: cover;
     object-position: 0% 26%;
   }
@@ -49,5 +50,40 @@
   &:has(.share-toast:not([hidden])) &__footer {
     opacity: 0;
     pointer-events: none;
+  }
+
+  @media screen and (width >= 44rem) {
+    height: 21.625rem;
+    flex-direction: row;
+    align-items: stretch;
+
+    &__image {
+      min-width: 14.3125rem;
+      min-height: 100%;
+      border-radius: 0.625rem 0 0 0.625rem;
+      object-position: 0% 0%;
+    }
+
+    &__content {
+      display: flex;
+      padding: 2.5625rem 2.25rem 2.5625rem 2rem;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: var(--spacing-300);
+    }
+
+    &__title {
+      margin-block-end: 0;
+    }
+
+    &__description {
+      margin-block-end: auto;
+      letter-spacing: 2.5%;
+    }
+
+    &:has(.share-toast:not([hidden])) &__footer {
+      opacity: 1;
+      pointer-events: auto;
+    }
   }
 }

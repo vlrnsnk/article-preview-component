@@ -42,4 +42,26 @@
     opacity: 0;
     transform: translateY(100%);
   }
+
+  @media screen and (width >= 44rem) {
+    inset: auto -4.5rem 30% auto;
+    padding: 1.125rem 2.375rem;
+    border-radius: 0.625rem;
+
+    &::after {
+      position: absolute;
+      bottom: -0.5rem;
+      left: 50%;
+      width: 1rem;
+      height: 1rem;
+      background-color: var(--color-grey-900);
+      content: '';
+      translate: -50% 0;
+      rotate: 45deg;
+    }
+
+    &__share-button {
+      display: none;
+    }
+  }
 }
