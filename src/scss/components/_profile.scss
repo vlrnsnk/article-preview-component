@@ -19,11 +19,11 @@
   &__info {
     @include text-preset-2;
 
-    font-weight: 700;
     color: var(--color-grey-900);
   }
 
   &__author {
+    font-weight: 700;
     letter-spacing: 1.5%;
   }
 
