@@ -7,6 +7,7 @@
   align-items: center;
   background-color: var(--color-white);
   border-radius: 0.625rem;
+  box-shadow: 0 2.5rem 2.5rem -0.625rem hsl(210deg 29% 84% / 50%);
 
   &__image {
     overflow: hidden;
