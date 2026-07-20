@@ -1,6 +1,9 @@
 /* Fonts */
 
-$fonts-manrope: ();
+$fonts-manrope: (
+  500: 'Manrope-Medium',
+  700: 'Manrope-Bold',
+);
 
 @each $weight, $file in $fonts-manrope {
   @font-face {
